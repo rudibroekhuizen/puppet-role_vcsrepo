@@ -1,6 +1,6 @@
-# == Class: vcsrepo
+# == Class: role_vcsrepo
 #
-# Full description of class vcsrepo here.
+# Full description of class role_vcsrepo here.
 #
 # === Parameters
 #
@@ -35,7 +35,7 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class vcsrepo (
+class role_vcsrepo (
   $vcsrepo_hash = undef
 ) {
 

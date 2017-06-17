@@ -35,7 +35,16 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class vcsrepo {
+class vcsrepo (
+  $vcsrepo_hash = undef
+) {
+
+  $vcsrepo_hash.each |$title, $vcsrepo| {
+    vcsrepo { "/etc/puppetlabs/code/modules/${title}":
+      provider => git,
+      source   => $vcsrepo["source"],
+    }
+  }
 
 
 }
